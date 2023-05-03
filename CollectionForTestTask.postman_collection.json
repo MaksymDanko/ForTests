@@ -4,52 +4,49 @@
 		"name": "CollectionForTestTask",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": [
-		{
+	"item": [{
 			"name": "Members",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Members response status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test('Members JSON Schema is valid', function() {",
-							"    pm.response.to.have.jsonSchema(pm.response.json());",
-							"});",
-							"",
-							"pm.test(\"Members Status is OK\", function () {",
-							"    pm.response.to.have.status(\"OK\")",
-							"});",
-							"",
-							"pm.test(\"Members response time is less than 500ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);",
-							"});",
-							"",
-							"pm.test(\"Content-Type is application/json\", function () {",
-							"    pm.response.to.have.header(\"Content-Type\");",
-							"    let contentType = pm.response.headers.get(\"Content-Type\");",
-							"    pm.expect(contentType).to.include(\"application/json\");",
-							"});",
-							"",
-							"pm.test(\"Members status value is success\", function () {",
-							"    pm.expect(pm.response.json().status).to.eql(\"success\");",
-							"});",
-							"",
-							"pm.test(\"Members data is an object\", function () {",
-							"    pm.expect(pm.response.json().data).to.be.an('object');",
-							"  });",
-							"",
-							"pm.test(\"Members has an array with members\", function () {",
-							"    pm.expect(pm.response.json().data.members).to.be.an('array');",
-							"  });"
-						],
-						"type": "text/javascript"
-					}
+			"event": [{
+				"listen": "test",
+				"script": {
+					"exec": [
+						"pm.test(\"Members response status code is 200\", function () {",
+						"    pm.response.to.have.status(200);",
+						"});",
+						"",
+						"pm.test('Members JSON Schema is valid', function() {",
+						"    pm.response.to.have.jsonSchema(pm.response.json());",
+						"});",
+						"",
+						"pm.test(\"Members Status is OK\", function () {",
+						"    pm.response.to.have.status(\"OK\")",
+						"});",
+						"",
+						"pm.test(\"Members response time is less than 500ms\", function () {",
+						"    pm.expect(pm.response.responseTime).to.be.below(500);",
+						"});",
+						"",
+						"pm.test(\"Content-Type is application/json\", function () {",
+						"    pm.response.to.have.header(\"Content-Type\");",
+						"    let contentType = pm.response.headers.get(\"Content-Type\");",
+						"    pm.expect(contentType).to.include(\"application/json\");",
+						"});",
+						"",
+						"pm.test(\"Members status value is success\", function () {",
+						"    pm.expect(pm.response.json().status).to.eql(\"success\");",
+						"});",
+						"",
+						"pm.test(\"Members data is an object\", function () {",
+						"    pm.expect(pm.response.json().data).to.be.an('object');",
+						"  });",
+						"",
+						"pm.test(\"Members has an array with members\", function () {",
+						"    pm.expect(pm.response.json().data.members).to.be.an('array');",
+						"  });"
+					],
+					"type": "text/javascript"
 				}
-			],
+			}],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -70,45 +67,43 @@
 		},
 		{
 			"name": "Members Details",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Member's details response status code\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Member's details JSON Schema is valid\", function() {",
-							"    pm.response.to.have.jsonSchema(pm.response.json());",
-							"});",
-							"",
-							"pm.test(\"Member's details Status is OK\", function () {",
-							"    pm.response.to.have.status(\"OK\")",
-							"});",
-							"",
-							"pm.test(\"Members details response time is less than 500ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(500);",
-							"});",
-							"",
-							"pm.test(\"Content-Type is application/json\", function () {",
-							"    pm.response.to.have.header(\"Content-Type\");",
-							"    let contentType = pm.response.headers.get(\"Content-Type\");",
-							"    pm.expect(contentType).to.include(\"application/json\");",
-							"});",
-							"",
-							"pm.test(\"Members details status value is success\", function () {",
-							"    pm.expect(pm.response.json().status).to.eql(\"success\");",
-							"});",
-							"",
-							"pm.test(\"Member's details data is an object\", function () {",
-							"    pm.expect(pm.response.json().data).to.be.an('object');",
-							"  });"
-						],
-						"type": "text/javascript"
-					}
+			"event": [{
+				"listen": "test",
+				"script": {
+					"exec": [
+						"pm.test(\"Member's details response status code\", function () {",
+						"    pm.response.to.have.status(200);",
+						"});",
+						"",
+						"pm.test(\"Member's details JSON Schema is valid\", function() {",
+						"    pm.response.to.have.jsonSchema(pm.response.json());",
+						"});",
+						"",
+						"pm.test(\"Member's details Status is OK\", function () {",
+						"    pm.response.to.have.status(\"OK\")",
+						"});",
+						"",
+						"pm.test(\"Members details response time is less than 500ms\", function () {",
+						"    pm.expect(pm.response.responseTime).to.be.below(500);",
+						"});",
+						"",
+						"pm.test(\"Content-Type is application/json\", function () {",
+						"    pm.response.to.have.header(\"Content-Type\");",
+						"    let contentType = pm.response.headers.get(\"Content-Type\");",
+						"    pm.expect(contentType).to.include(\"application/json\");",
+						"});",
+						"",
+						"pm.test(\"Members details status value is success\", function () {",
+						"    pm.expect(pm.response.json().status).to.eql(\"success\");",
+						"});",
+						"",
+						"pm.test(\"Member's details data is an object\", function () {",
+						"    pm.expect(pm.response.json().data).to.be.an('object');",
+						"  });"
+					],
+					"type": "text/javascript"
 				}
-			],
+			}],
 			"request": {
 				"method": "GET",
 				"header": [],
